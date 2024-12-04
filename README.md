@@ -15,7 +15,7 @@ https://vrv-demo-ui.vercel.app/
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://vrv-demo-ui.vercel.app/screenshot.png)
 
 
 ## Run Locally
