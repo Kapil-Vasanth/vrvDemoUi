@@ -10,7 +10,16 @@ function LoginPage() {
         const password = e.target.password.value
     
         if(email == "admin" && password == "admin"){
+          localStorage.setItem('role','admin')
           navigate("/admin")
+        }
+        if(email == "manager" && password == "manager"){
+          localStorage.setItem('role','manager')
+          navigate("/manager")
+        }
+        if(email == "user" && password == "user"){
+          localStorage.setItem('role','user')
+          navigate("/user")
         }
     }
 

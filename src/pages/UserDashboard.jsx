@@ -18,16 +18,13 @@ function UserDashboard() {
         {outlet ? (
           <Outlet />
         ) : (
-          <div class="w-full space-y-2  p-4 min-h-40">
+          <div class="w-full space-y-2  p-4 min-h-40 dark:text-white">
             <h2 class="truncate text-2xl font-medium tracking-tight">
-              Congratulations, your application has users!
+              Hi User 
             </h2>
             <div class="text-base text-secondary">
               <p>
-                VRV handles authentication and user management for you. Next,
-                learn how to access this data and use it in your application,
-                customize the look and feel of your components, and get your
-                VRV app ready for production.
+              List all task and manage seamless Ensure you have organization linked 
               </p>
             </div>
           </div>

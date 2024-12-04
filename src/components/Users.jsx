@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { format } from "date-fns";
-import { fetchAllUsers, createUser, deleteUser } from "../api";
 import { useNavigate, Link } from "react-router-dom";
-import { userList } from "../data";
 
 function Users() {
   const navigate = useNavigate();
@@ -10,21 +7,21 @@ function Users() {
   const handleForm = async (e) => {
     e.preventDefault();
 
-    const username = e.target.username.value;
-    const email = e.target.email.value;
-    const password = e.target.username.value;
-    const role = e.target.role.value;
+    // const username = e.target.username.value;
+    // const email = e.target.email.value;
+    // const password = e.target.username.value;
+    // const role = e.target.role.value;
 
-    const data = {
-      username: username,
-      email: email,
-      password: password,
-      role: role,
-    };
+    // const data = {
+    //   username: username,
+    //   email: email,
+    //   password: password,
+    //   role: role,
+    // };
 
-    await createUser(data);
-    const users = await fetchAllUsers();
-    setUsersList(users);
+    // await createUser(data);
+    // const users = await fetchAllUsers();
+    // setUsersList(users);
   };
 
   const removeUser = async (id) => {};
@@ -46,7 +43,7 @@ function Users() {
                 </div>
 
                 <div>
-                  <div
+                  <button
                     class="inline-flex gap-x-2"
                     aria-haspopup="dialog"
                     aria-expanded="false"
@@ -74,7 +71,7 @@ function Users() {
                       </svg>
                       Add user
                     </a>
-                  </div>
+                  </button>
                 </div>
               </div>
 
@@ -94,7 +91,7 @@ function Users() {
 
                     <th
                       scope="col"
-                      class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3 text-start"
+                      class="ps-6 lg:ps-3 xl:ps-2 pe-6 py-3 text-start"
                     >
                       <div class="flex items-center gap-x-2">
                         <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-neutral-200">
@@ -154,7 +151,7 @@ function Users() {
                       </div>
                     </td>
                     <td class="size-px whitespace-nowrap">
-                      <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3">
+                      <div class="ps-6 lg:ps-3 xl:ps-2 pe-6 py-3">
                         <div class="flex items-center gap-x-3">
                           <img
                             class="inline-block size-[38px] rounded-full"
@@ -250,7 +247,7 @@ function Users() {
                       </div>
                     </td>
                     <td class="size-px whitespace-nowrap">
-                      <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3">
+                      <div class="ps-6 lg:ps-3 xl:ps-2 pe-6 py-3">
                         <div class="flex items-center gap-x-3">
                           <img
                             class="inline-block size-[38px] rounded-full"
@@ -346,7 +343,7 @@ function Users() {
                       </div>
                     </td>
                     <td class="size-px whitespace-nowrap">
-                      <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3">
+                      <div class="ps-6 lg:ps-3 xl:ps-2 pe-6 py-3">
                         <div class="flex items-center gap-x-3">
                           <span class="inline-flex items-center justify-center size-[38px] rounded-full bg-white border border-gray-300 dark:bg-neutral-800 dark:border-neutral-700">
                             <span class="font-medium text-sm text-gray-800 leading-none dark:text-neutral-200">
@@ -434,7 +431,7 @@ function Users() {
                 <div>
                   <p class="text-sm text-gray-600 dark:text-neutral-400">
                     <span class="font-semibold text-gray-800 dark:text-neutral-200">
-                      12
+                      3
                     </span>{" "}
                     results
                   </p>
@@ -491,7 +488,9 @@ function Users() {
         </div>
       </div>
 
-      {/* Modal for creating new Organziation */}
+      
+
+      {/* Modal for creating new User */}
       <div
         id="hs-slide-down-animation-modal"
         class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none"

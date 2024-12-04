@@ -13,14 +13,14 @@ function AdminDashboard() {
   // write a useEffect to handle permission
 
   return (
-    <div className="h-screen flex flex-col ">
+    <div className="h-screen flex flex-col dark:bg-neutral-800 dark:border-neutral-700">
       <Navigation role={"admin"} />
       {/* below should be an outlet */}
       <div className="max-w-screen-lg m-auto w-full  grow flex justify-center mt-6">
         {outlet ? (
           <Outlet />
         ) : (
-          <div class="w-full p-4 min-h-40">
+          <div class="w-full p-4 min-h-40 dark:text-white">
             <h2 class="truncate text-2xl font-medium tracking-tight mb-2">
               Congratulations, your application has users!
             </h2>
@@ -100,7 +100,7 @@ function AdminDashboard() {
                 <div class="p-4 md:p-5">
                   <div class="flex items-center gap-x-2">
                     <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-neutral-500">
-                      Sessions
+                      Total Active Managers
                     </p>
                   </div>
 
@@ -116,7 +116,7 @@ function AdminDashboard() {
                 <div class="p-4 md:p-5">
                   <div class="flex items-center gap-x-2">
                     <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-neutral-500">
-                      Avg. Click Rate
+                      Tasks Completion
                     </p>
                   </div>
 
@@ -150,7 +150,7 @@ function AdminDashboard() {
                 <div class="p-4 md:p-5">
                   <div class="flex items-center gap-x-2">
                     <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-neutral-500">
-                      Pageviews
+                      Tasks Reviews
                     </p>
                   </div>
 

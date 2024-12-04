@@ -1,8 +1,63 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# VRV Frontend (RBAC) 
 
-Currently, two official plugins are available:
+A Role Based Access Control Frontend Built on React + Vite. Using Preline to create simple components and with the power of tailwind to design it.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- Admin can login with username **admin** and password **admin**
+- Manager can login with username **manager** and password **manager**
+- Users can login with username **user** and password **user**
+## Live Demo
+
+This is deployed in vercel
+https://vrv-demo-ui.vercel.app/
+
+## Screenshots
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Kapil-Vasanth/vrvDemoUi.git
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+
+## Documentation
+
+- [React Docs](https://react.dev/)
+- [Vite](https://vite.dev/)
+- [Preline](https://preline.co/)
+- [Tailwind](https://tailwindcss.com/)
+
+
+## Future Scope
+
+This App could be integrated with backend and could be used to create more robust application.
+Easy to work with Design Layouts because of tailwind powering the UI.
+## Feedback
+
+If you have any feedback, please reach out to us at kapilvasanthbalerao@gmai.com
+

@@ -10,16 +10,16 @@ function Navigation({ role }) {
   };
 
   return (
-    <div className="mb-2 border-b">
+    <div className="mb-2 border-b ">
       <header className="flex flex-wrap  md:justify-start md:flex-nowrap z-50 w-full bg-white border-b border-gray-200 dark:bg-neutral-800 dark:border-neutral-700">
         <nav className="relative max-w-[85rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-2 px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center gap-x-1">
             <a
               className="flex-none font-semibold text-xl text-black focus:outline-none focus:opacity-80 dark:text-white"
-              href="#"
+              href="/"
               aria-label="Brand"
             >
-              VRV
+              VRV Security
             </a>
 
             <button
@@ -77,7 +77,7 @@ function Navigation({ role }) {
                   <div className="flex flex-col md:flex-row md:justify-end md:items-center gap-0.5 md:gap-1">
                     <a
                       className="p-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-                      href="account"
+                      href={`/${role}/account`}
                     >
                       <svg
                         className="shrink-0 size-4 me-3 md:me-2 block md:hidden"
@@ -95,30 +95,6 @@ function Navigation({ role }) {
                         <circle cx="12" cy="7" r="4" />
                       </svg>
                       Account
-                    </a>
-
-                    <a
-                      className="p-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-                      href="#"
-                    >
-                      <svg
-                        className="shrink-0 size-4 me-3 md:me-2 block md:hidden"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path d="M12 12h.01" />
-                        <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-                        <path d="M22 13a18.15 18.15 0 0 1-20 0" />
-                        <rect width="20" height="14" x="2" y="6" rx="2" />
-                      </svg>
-                      Work
                     </a>
 
                     <button
@@ -145,6 +121,7 @@ function Navigation({ role }) {
                       </svg>
                       Logout
                     </button>
+                    
                   </div>
                 </div>
               </div>
@@ -193,7 +170,7 @@ function Navigation({ role }) {
             <div className="py-2 sm:py-0 flex flex-col sm:flex-row sm:justify-end gap-y-2 sm:gap-y-0 sm:gap-x-6">
               <a
                 className="font-medium text-sm text-gray-800 focus:outline-none focus:text-blue-600 dark:text-blue-500 dark:focus:text-blue-500"
-                href="/admin"
+                href={`/${role}`}
               >
                 Overview
               </a>
@@ -218,7 +195,7 @@ function Navigation({ role }) {
               )}
               <a
                 className="font-medium text-sm text-gray-800 hover:text-blue-600 focus:outline-none focus:text-blue-600 dark:text-neutral-200 dark:hover:text-blue-500 dark:focus:text-blue-500"
-                href="./tasks"
+                href={`/${role}/tasks`}
               >
                 Tasks
               </a>

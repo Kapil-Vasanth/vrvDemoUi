@@ -1,10 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 
 function Organization() {
+  const navigate = useNavigate()
+
+  const orgProfile = () => {
+    navigate("./org-name")
+  }
+
+
   return (
     <div class="-m-1.5 overflow-auto w-full min-h-[30rem]">
-      <div class="w-full space-y-2 mb-4">
-        <h2 class="truncate text-2xl font-medium tracking-tight">
+      <div class="w-full space-y-2 mb-4 dark:text-white">
+        <h2 class="truncate text-2xl font-medium tracking-tight ">
           Organizations
         </h2>
         <p class="truncate text-base text-secondary">
@@ -26,30 +35,30 @@ function Organization() {
       </div>
 
       
-      <div class="p-1.5 min-w-full inline-block align-middle border rounded">
+      <div class="p-1.5 min-w-full inline-block align-middle border rounded dark:text-white">
         <div class="overflow-hidden">
           <div class="table border-collapse table-auto w-full divide-y divide-gray-200 dark:divide-neutral-700">
             <div class="table-header-group">
               <div class="table-row">
-                <div class="table-cell px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">
+                <div class="table-cell px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-100">
                   Organization
                 </div>
-                <div class="table-cell px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">
+                <div class="table-cell px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-100">
                   desc
                 </div>
-                <div class="table-cell px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">
+                <div class="table-cell px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-100">
                   ID
                 </div>
-                <div class="table-cell px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">
+                <div class="table-cell px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-100">
                   Members
                 </div>
-                <div class="table-cell px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">
+                <div class="table-cell px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase dark:text-neutral-100">
                   Created
                 </div>
               </div>
             </div>
             <div class="table-row-group divide-y divide-gray-200 bg-white dark:divide-neutral-700 dark:bg-neutral-800">
-              <div class="table-row cursor-pointer">
+              <div class="table-row cursor-pointer" onClick={orgProfile}>
                 <div class="table-cell px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
                   Kyda Org
                 </div>
@@ -71,7 +80,7 @@ function Organization() {
                   </button>
                 </div>
               </div>
-              <div class="table-row cursor-pointer">
+              <div class="table-row cursor-pointer" onClick={orgProfile}>
                 <div class="table-cell px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
                   VRV ORG
                 </div>
@@ -93,7 +102,7 @@ function Organization() {
                   </button>
                 </div>
               </div>
-              <div class="table-row cursor-pointer">
+              <div class="table-row cursor-pointer" onClick={orgProfile}>
                 <div class="table-cell px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
                   infosys
                 </div>
@@ -128,9 +137,9 @@ function Organization() {
         tabindex="-1"
         aria-labelledby="hs-slide-down-animation-modal-label"
       >
-        <div class="hs-overlay-animation-target hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
+        <div class="hs-overlay-animation-target hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto dark:text-white">
           <div class="flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto dark:bg-neutral-800 dark:border-neutral-700 dark:shadow-neutral-700/70">
-            <div class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-700">
+            <div class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-700 dark:text-white">
               <h3
                 id="hs-slide-down-animation-modal-label"
                 class="font-bold text-gray-800 dark:text-white"
@@ -179,11 +188,11 @@ function Organization() {
                 />
               </div>
               <div class="max-w-sm space-y-3">
-                <label class="block ">Manager</label>
+                <label class="block ">Manager - <span className="text-xs">link to a manager</span></label>
                 <input
                   type="text"
                   class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                  placeholder="org-name"
+                  placeholder="org-manager"
                 />
               </div>
             </div>

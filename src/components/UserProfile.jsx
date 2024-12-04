@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getUserById } from "../api";
 import { useParams } from "react-router-dom";
 
-function UsersEdit() {
+function UserProfile() {
   const [userData, setUserData] = useState({});
   const { id } = useParams();
   useEffect(() => {
@@ -26,7 +26,7 @@ function UsersEdit() {
   }
 
   return (
-    <div class="w-full max-w-2xl mx-auto pt-10 md:pt-16 px-4 sm:px-6 lg:px-8">
+    <div class="w-full max-w-2xl mx-auto pt-10 md:pt-8 px-4 sm:px-6 lg:px-8">
       <div class="flex items-center gap-x-3">
         <div class="shrink-0">
           <img class="shrink-0 size-16 rounded-full" src="https://images.unsplash.com/photo-1510706019500-d23a509eecd4?q=80&amp;w=2667&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=320&amp;h=320&amp;q=80&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Avatar" />
@@ -44,13 +44,13 @@ function UsersEdit() {
       <form class="mt-4" onSubmit={handleSubmit}>
         
         <div class="mb-4">
-          <label class="block text-sm font-medium mb-2">
+          <label class="block text-sm font-medium mb-2 dark:text-white">
             <span>Full name</span>
           </label>
           <input
             type="text"
             id="hs-hero-name-2"
-            value={userData.username}
+            value="Eliana"
             class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
             placeholder="Full name"
           />
@@ -63,7 +63,7 @@ function UsersEdit() {
           <input
             type="email"
             id="hs-hero-email-2"
-            value={userData.email}
+            value="eliana@gmail.com"
             class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
             placeholder="Email address"
           />
@@ -79,7 +79,7 @@ function UsersEdit() {
           <input
             type="email"
             name="hs-hero-password-2"
-            value={userData.password}
+            value="#$(*99fasdf#"
             class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
             placeholder="Password"
           />
@@ -138,4 +138,4 @@ function UsersEdit() {
   );
 }
 
-export default UsersEdit;
+export default UserProfile;
