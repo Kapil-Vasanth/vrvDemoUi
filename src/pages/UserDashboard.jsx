@@ -11,7 +11,7 @@ function UserDashboard() {
   
 
   return (
-    <div className="h-screen flex flex-col ">
+    <div className="h-screen flex flex-col bg-[url('https://preline.co/assets/svg/component/hero-gradient.svg')]">
       <Navigation role={"user"}/>
       {/* below should be an outlet */}
       <div className="max-w-screen-lg m-auto w-full  grow flex justify-center mt-6">

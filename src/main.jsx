@@ -11,10 +11,12 @@ import Organization from './components/Organization.jsx'
 import Users from './components/Users.jsx'
 import UserProfile from './components/UserProfile.jsx'
 import AdminAccount from './components/adminAccount.jsx'
-import OrgProfile from './components/OrgProfile.jsx';
+
 import Tasks from './components/Tasks.jsx';
 import ManagerDashboard from './pages/ManagerDashboard.jsx'
 import UserDashboard from './pages/UserDashboard.jsx'
+import TasksEdit from './components/TasksEdit.jsx';
+import OrgProfile from './components/OrgProfile.jsx';
 
 // TO Make Preline Functions Work
 HSStaticMethods.autoInit();
@@ -44,17 +46,21 @@ const router = createBrowserRouter(
         <Route path="users" element={<Users />} />
         <Route path="tasks" element={<Tasks />} />
         <Route path="users/:id" element={<UserProfile />} />
-        <Route path="tasks/:id" element={<UserProfile />} />
+        <Route path="tasks/:id" element={<TasksEdit />} />
       </Route>
       <Route path="manager" element={<ManagerDashboard />} >
+      <Route path="account" element={<AdminAccount />} />
         <Route path="organization" element={<Organization />} />
+        <Route path="organization/:id" element={<OrgProfile />} />
         <Route path="users" element={<Users />} />
         <Route path="users/:id" element={<UserProfile />} />
         <Route path="tasks" element={<Tasks />} />
+        <Route path="tasks/:id" element={<TasksEdit />} />
       </Route>
       <Route exact path="user" element={<UserDashboard />} >
         <Route path=":id" element={<UserProfile />} />
         <Route path="tasks" element={<Tasks />} />
+        <Route path="tasks/:id" element={<TasksEdit />} />
       </Route>
 
       <Route path="login" element={<LoginPage />} />

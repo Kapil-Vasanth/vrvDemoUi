@@ -13,7 +13,7 @@ function AdminDashboard() {
   // write a useEffect to handle permission
 
   return (
-    <div className="h-screen flex flex-col dark:bg-neutral-800 dark:border-neutral-700">
+    <div className="h-screen flex flex-col dark:bg-neutral-800 dark:border-neutral-700 bg-[url('https://preline.co/assets/svg/component/hero-gradient.svg')]">
       <Navigation role={"admin"} />
       {/* below should be an outlet */}
       <div className="max-w-screen-lg m-auto w-full  grow flex justify-center mt-6">

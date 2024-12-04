@@ -175,7 +175,7 @@ function Navigation({ role }) {
                 Overview
               </a>
 
-              {role === "admin" ? (
+              {(role === "admin") || (role === "manager") ? (
                 <>
                   <a
                     className="font-medium text-sm text-gray-800 hover:text-blue-600 focus:outline-none focus:text-blue-600 dark:text-neutral-200 dark:hover:text-blue-500 dark:focus:text-blue-500"

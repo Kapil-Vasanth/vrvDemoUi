@@ -11,21 +11,25 @@ function LoginPage() {
     
         if(email == "admin" && password == "admin"){
           localStorage.setItem('role','admin')
-          navigate("/admin")
-        }
+          await navigate("/admin")
+        } else
         if(email == "manager" && password == "manager"){
           localStorage.setItem('role','manager')
-          navigate("/manager")
-        }
+          await navigate("/manager")
+        } else
         if(email == "user" && password == "user"){
           localStorage.setItem('role','user')
-          navigate("/user")
+          await navigate("/user")
+        } else {
+          alert("incorrect password")
         }
+        
     }
 
   return (
-    <div className="min-h-screen m-auto flex flex-col justify-center items-center gap-6 bg-gradient-to-r from-cyan-500 to-blue-500">
-        <h1 className="text-6xl font-sans font-semibold text-white tracking-wide">VRV</h1>
+    
+    <div className="min-h-screen m-auto flex flex-col justify-center items-center gap-6  from-cyan-500 to-blue-500  h-full bg-[linear-gradient(to_bottom,_#f6f6f7_10%,_#fff_20%,_#fff_40%,_#2563eb_80%)] ">
+        <h1 className="text-6xl font-sans font-semibold text-black tracking-wide">VRV</h1>
         <div className="min-w-[500px] bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-neutral-900 dark:border-neutral-700">
       <div className="p-4 sm:p-7">
         <div className="text-center">
