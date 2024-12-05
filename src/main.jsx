@@ -17,6 +17,7 @@ import ManagerDashboard from './pages/ManagerDashboard.jsx'
 import UserDashboard from './pages/UserDashboard.jsx'
 import TasksEdit from './components/TasksEdit.jsx';
 import OrgProfile from './components/OrgProfile.jsx';
+import SignUpPage from './pages/SignUpPage.jsx';
 
 // TO Make Preline Functions Work
 HSStaticMethods.autoInit();
@@ -64,6 +65,7 @@ const router = createBrowserRouter(
       </Route>
 
       <Route path="login" element={<LoginPage />} />
+      <Route path="signup" element={<SignUpPage />} />
       <Route path="*" element={<ErrorPage/>} />
     </Route>
   )

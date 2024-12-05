@@ -8,8 +8,8 @@ function Tasks() {
       <div class="mb-2">
         <h1 class="text-xl capitalize font-semibold">{role} Tasks</h1>
       </div>
-      <div class="grid grid-cols-3 h-fit gap-4">
-        <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 hover:bg-gray-200 cursor-pointer">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-fit gap-4">
+        <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 hover:bg-gray-200 cursor-pointer divide-y-2">
           <div class="h-[120px] flex justify-center items-center grow">
             <svg
               class="shrink-0 size-11"
@@ -28,9 +28,9 @@ function Tasks() {
             </svg>
           </div>
           <div class="p-4 md:p-5">
-            <h3 class="text-lg font-bold text-gray-800 dark:text-white text-center">
+            <a href="./tasks/newTask"><h3 class="text-lg font-bold text-gray-800 dark:text-white text-center">
               Create New Task
-            </h3>
+            </h3></a>
           </div>
         </div>
         {[1, 2, 3, 4, 5].map((task) => (
