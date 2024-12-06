@@ -11,6 +11,7 @@ export default {
   theme: {
     extend: {},
   },
+  purge: false, // Temporarily disable purging
   plugins: [
     forms,
     preline,
